@@ -1,26 +1,6 @@
-import { getServerSession } from 'next-auth';
-import Link from 'next/link';
 import { ReactNode } from 'react';
 
-export default async function CoursesPage(): Promise<ReactNode> {
-  const session = await getServerSession();
-
-  if (!session) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold mb-4">Please sign in to view courses</h2>
-          <Link
-            href="/signin"
-            className="text-indigo-600 hover:text-indigo-500"
-          >
-            Sign In
-          </Link>
-        </div>
-      </div>
-    );
-  }
-
+export default function CoursesPage(): ReactNode {
   return (
     <div className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
