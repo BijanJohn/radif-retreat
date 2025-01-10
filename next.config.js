@@ -4,7 +4,10 @@ const nextConfig = {
   distDir: 'dist',
   images: {
     unoptimized: true,
+    loader: 'custom',
+    loaderFile: './src/lib/imageLoader.ts',
   },
+  assetPrefix: '/',
 }
 
 module.exports = nextConfig
