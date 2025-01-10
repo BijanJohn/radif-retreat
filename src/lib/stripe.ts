@@ -21,8 +21,8 @@ export const createCheckoutSession = async (courseId: string, userId: string, pr
         },
       ],
       mode: "payment",
-      success_url: `${process.env.NEXTAUTH_URL}/courses/${courseId}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.NEXTAUTH_URL}/courses/${courseId}`,
+      success_url: `${process.env.SITE_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${process.env.SITE_URL}/`,
       metadata: {
         courseId,
         userId,
